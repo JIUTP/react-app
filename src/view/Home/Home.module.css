@@ -1,0 +1,11 @@
+.home{position: relative;}
+.banner{height: 230px;background: #1fd9fb url(https://editor-video.699pic.com/public/img/headerBg.e157afc0.jpg) 50%/auto 100% no-repeat;
+    overflow: hidden;}
+.banner h5{font-size: 24px;color: #fff;text-align: center;margin-top: 60px;margin-bottom: 20px;font-weight: initial;position: relative;}
+.video{width: 1200px;margin: 20px auto 0;display: flex;flex-wrap: wrap;justify-content: space-between;}
+.video_name{font-size: 18px;color: #333;margin-bottom: 10px;}
+.video_warp{display: flex;}
+.video_modal{width: 560px;height: 315px;margin-right: 30px;}
+.video_modal video{width: 100%;height: 100%;outline: none;}
+.video_btn{height: 36px;margin-bottom: 23px;}
+.video_cont p{margin: 0;font-size: 14px;color: #999;height: 30px;line-height: 30px;}

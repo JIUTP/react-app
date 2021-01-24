@@ -1,0 +1,23 @@
+.search_wrapper{width: 520px;height: 40px;margin: 0 auto;display: flex;align-items: center;position: relative;}
+.search_input{width: 410px;height: 40px;box-sizing: border-box;border: 1px solid #318aff;border-radius: 100px 0 0 100px;
+    border-right: 0;background-color: #fff;padding: 0 15px;outline: none;position: relative;display: block;}
+.enter_btn{height: 40px;border-radius: 0 100px 100px 0;}
+.search_menu{width: 410px;background-color: #fff;border-radius: 10px;overflow: hidden;box-shadow: 0 3px 6px -4px rgba(0,0,0,.12), 0 6px 16px 0 rgba(0,0,0,.08), 0 9px 28px 8px rgba(0,0,0,.05);}
+.search_ranking_item{height: 30px;padding: 0 20px;display: flex;align-items: center;justify-content: space-between;
+    color: #666;cursor: pointer;font-size: 14px;color: #999;}
+.search_ranking_item span:first-child b{font-weight: initial;}
+.search_ranking_item span:first-child i{display: inline-block;width: 16px;height: 16px;border-radius: 4px;line-height: 16px;
+    text-align: center;color: #a1a9b0;background-color: #e5eaef;margin-right: 7px;font-style: initial;}
+.search_ranking_item:nth-child(-n+3) span:first-child i{color: #fff;background-color: #a8d7ff;}
+.search_ranking_item:hover{background: #e7f0f8;}
+.search_ranking_item:hover span:first-child b{color: #2fa4f5;}
+.recent_search{font-size: 14px;padding: 0 20px;display: flex;align-items: center;background: #f5f6f9;height: 44px;}
+.recent_search div{color: #999;}
+.icon{margin-right: 4px;}
+.recent_search p{color: #333;margin: 0;flex: 1;overflow: hidden;line-height: 44px;height: 100%;}
+.recent_search p span{margin-left: 12px;}
+.recent_search p span:first-child{margin-left: 0;}
+.search_item{font-size: 14px;height: 30px;line-height: 30px;padding: 0 20px;color: #666;margin: 0;}
+.search_item:hover{color: #2fa4f5;background: #e7f0f8;}
+
+

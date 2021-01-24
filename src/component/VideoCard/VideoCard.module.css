@@ -1,0 +1,10 @@
+.video_card{width: 285px;height: 200px;border-radius: 4px;background-color: #fff;box-shadow: 0 0 4px 0 rgba(0,0,0,.2);
+        overflow: hidden;margin-bottom: 30px;transition: all .3s;}
+.video_card:hover{box-shadow: 0 0 8px 0 rgba(0,0,0,.4);transform: translateY(-5px);}
+.video_cont{display: flex;justify-content: space-between;align-items: center;font-size: 14px;
+        color: #666;padding: 0 12px;height: 40px;}
+.video_card p{width: 210px;overflow: hidden;white-space: nowrap;}
+.video_btn{width: 100%;display: flex;align-items: center;justify-content: center;display: none;}
+.video_card:hover .video_btn{display: flex;}
+.video_card:hover .video_cont p{display: none;}
+.video_card:hover .video_cont span{display: none;}
