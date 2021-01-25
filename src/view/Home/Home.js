@@ -23,7 +23,7 @@ function Home() {
     const handleCancel = () => {
       setIsModalVisible(false);
     };
-    function getData(msg){
+    const getData = (msg) => {
       const videoModal = (
         <div>
           <p className={styles.video_name}>{msg.name}</p>
@@ -53,12 +53,15 @@ function Home() {
       showModal()
     }
 
+    const getSearch = (msg) =>{
+        console.log(msg)
+    }
     
     return (
       <div className={styles.home}>
         <div className={styles.banner}>
           <h5>一键套用模板，一分钟学会做视频</h5>
-          <Search />
+          <Search  getSearch={getSearch} />
         </div>
         <Menu  />
         <div className={styles.video}>

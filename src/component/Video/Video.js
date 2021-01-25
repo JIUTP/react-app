@@ -2,7 +2,7 @@
 import React, {useRef,useState,useEffect,forwardRef,useImperativeHandle} from 'react';
 import styles from './Video.module.css'
 
-function Video({ src, poster, onClick }, ref){
+function Video({ src, poster}, ref){
     const videoRef = useRef();
     const [showPoster, toggleShowPoster] = useState(true);
     const [hasInteract, toggleHasInteract] = useState(() => false);
