@@ -1,12 +1,12 @@
 import React, { useRef, useState } from 'react'
-import demoData from './demoData'
-import Search from '../../component/Search/Search'
-import Menu from '../../component/Menu/Menu'
-import VideoCard from '../../component/VideoCard/VideoCard' 
-import Button from '../../component/Button/Button' 
-import styles from './Home.module.css'
-
 import { Modal } from 'antd';
+import Search from '@/component/Search/Search'
+import Menu from '@/component/Menu/Menu'
+import VideoCard from '@/component/VideoCard/VideoCard' 
+import Button from '@/component/Button/Button' 
+import styles from './Home.module.css'
+import demoData from './demoData'
+
 
 function Home() {
     const [isModalVisible, setIsModalVisible] = useState(false);
