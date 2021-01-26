@@ -23,33 +23,33 @@ function Search({getSearch}){
     let storage = window.localStorage
     const searchRef = useRef()
     const [searchVal,setSearchVal] = useState('')
-    // const [visible,setVisible] = useState(false)
+    const [visible,setVisible] = useState(false)
 
     const keyDownEnter = (event)=>{
         if(event.keyCode === 13){
             searchRef.current.blur()
-            setstorage()
+            setstorage(searchVal)
         }
     }
 
     const searchBtn = () => {
-        setstorage()
+        setstorage(searchVal)
     }
 
     const clickDropdown = (item) => {
         setSearchVal(item)
-        setstorage()
+        setstorage(item)
     }
 
-    const setstorage = () => {
+    const setstorage = (val) => {
         if(storage.getItem("editor_search_history")){
             let arr = JSON.parse(storage.getItem("editor_search_history"))
-            arr.unshift(searchVal)
+            arr.unshift(val)
             storage.setItem("editor_search_history",JSON.stringify(arr))
         }else{
-            storage.setItem("editor_search_history",JSON.stringify([searchVal]))
+            storage.setItem("editor_search_history",JSON.stringify([val]))
         }
-        getSearch(searchVal)
+        getSearch(val)
     }
 
     useEffect(() => {
@@ -72,9 +72,7 @@ function Search({getSearch}){
                                         
                                         JSON.parse(storage.getItem("editor_search_history")).map((item,index)=>
                                             <span 
-                                                onClick={(e)=>{
-                                                    clickDropdown(item)
-                                                }} 
+                                                onMouseDown={()=>{clickDropdown(item)}} 
                                                 key={index}
                                                 >{item}</span>    
                                         )
@@ -89,7 +87,7 @@ function Search({getSearch}){
                                 <li 
                                     className={styles.search_ranking_item}
                                     key={index}
-                                    onClick={()=>clickDropdown(item.name)}
+                                    onMouseDown={()=>clickDropdown(item.name)}
                                     >
                                     <span>
                                         <i>{++index}</i>
@@ -110,7 +108,7 @@ function Search({getSearch}){
                             <p 
                                 className={styles.search_item} 
                                 key={item.id}
-                                onClick={()=>clickDropdown(item.name)}
+                                onMouseDown={()=>clickDropdown(item.name)}
                                 >{item.name}</p>
                         )
                     }
@@ -126,8 +124,8 @@ function Search({getSearch}){
             >
             <Dropdown 
                 overlay={searchMenu}
-                trigger={['click']}
-                // visible={visible}
+                // trigger={['click']}
+                visible={visible}
             >
                 <input 
                     type="text"
@@ -136,8 +134,8 @@ function Search({getSearch}){
                     placeholder="请输入搜索关键词" 
                     className={styles.search_input}
                     onChange={event=>setSearchVal(event.target.value)}
-                    // onBlur={()=>setVisible(false)}
-                    // onFocus={()=>setVisible(true)}
+                    onBlur={()=>setVisible(false)}
+                    onFocus={()=>setVisible(true)}
                     ></input>
             </Dropdown>
             <Button active="true" width='110px' btnClassName={styles.enter_btn} 

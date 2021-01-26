@@ -31,7 +31,7 @@ function Home() {
             <div className={styles.video_modal}>
               <video
                 ref={videoRef}
-                autoplay="autoplay" 
+                autoPlay="autoplay" 
                 controls="controls"
                 src={msg.src}
                 />
