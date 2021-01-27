@@ -28,12 +28,12 @@ function Search({getSearch}){
     const keyDownEnter = (event)=>{
         if(event.keyCode === 13){
             searchRef.current.blur()
-            setstorage(searchVal)
+            setstorage()
         }
     }
 
     const searchBtn = () => {
-        setstorage(searchVal)
+        setstorage()
     }
 
     const clickDropdown = (item) => {
@@ -41,7 +41,7 @@ function Search({getSearch}){
         setstorage(item)
     }
 
-    const setstorage = (val) => {
+    const setstorage = (val=searchVal) => {
         if(storage.getItem("editor_search_history")){
             let arr = JSON.parse(storage.getItem("editor_search_history"))
             arr.unshift(val)
